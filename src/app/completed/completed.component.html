@@ -1,0 +1,39 @@
+<header>
+    <div class="nav container">
+        <!-- Logo -->
+        <a [routerLink]='["/home"]' class="logo">
+            To do List.
+        </a>
+        <!-- Nav List -->
+        <ul class="navbar">
+            <li><a [routerLink]='["/task"]'>Insert Task</a></li>
+            <li><a [routerLink]='["/todolist"]'>To do</a></li>
+            <li><a [routerLink]='["/completed"]'>Completed</a></li>
+        </ul>
+    </div> 
+</header>
+
+ <!-- CARICAMENTO-->
+<div *ngIf="isLoading" class="loader">
+        <div class="square" id="sq1"></div>
+        <div class="square" id="sq2"></div>
+        <div class="square" id="sq3"></div>
+        <div class="square" id="sq4"></div>
+        <div class="square" id="sq5"></div>
+        <div class="square" id="sq6"></div>
+        <div class="square" id="sq7"></div>
+        <div class="square" id="sq8"></div>
+        <div class="square" id="sq9"></div>
+</div>
+
+    <!-- Compiti svolti -->
+<div *ngIf="!isLoading">
+    <div *ngFor="let todo of arrayTodo" class="todolist">
+        <div *ngIf="todo.completed" class="rectangle">{{todo.title}}</div>
+        <div *ngIf="todo.completed">{{todo.id}}></div>
+        <button (click)="remove(todo.id)"class="button">
+            <span class="sp">Elimina</span>
+        </button>
+    </div>
+
+</div>

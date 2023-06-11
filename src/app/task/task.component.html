@@ -1,0 +1,42 @@
+<header>
+    <div class="nav container">
+     <!-- Logo -->
+        <a [routerLink]='["/home"]' class="logo">
+          To do List.
+        </a>
+        <!-- Nav List -->
+        <ul class="navbar">
+            <li><a [routerLink]='["/task"]'>Insert Task</a></li>
+            <li><a [routerLink]='["/todolist"]'>To do</a></li>
+            <li><a [routerLink]='["/completed"]'>Completed</a></li>
+        </ul>
+    </div>
+</header>
+
+ <!-- CARICAMENTO-->
+ <div *ngIf="isLoading" class="loader">
+    <div class="square" id="sq1"></div>
+    <div class="square" id="sq2"></div>
+    <div class="square" id="sq3"></div>
+    <div class="square" id="sq4"></div>
+    <div class="square" id="sq5"></div>
+    <div class="square" id="sq6"></div>
+    <div class="square" id="sq7"></div>
+    <div class="square" id="sq8"></div>
+    <div class="square" id="sq9"></div>
+</div>
+
+<div *ngIf="!isLoading">
+<div class="form-control">
+    <input name="text" [(ngModel)]='todo.title' class="input input-alt" placeholder="To do List!" required type="text">
+    <span class="input-border input-border-alt"></span>
+</div>
+
+<div class="button-container">
+    <button (click)="create()" class="button">
+      <span class="sp">Invia</span>
+    </button>
+</div>
+
+</div>
+  

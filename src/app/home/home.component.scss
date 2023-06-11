@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  }
+
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 4em;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #2B3044;
+}
+
+.button-position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+
+.cssbuttons-io-button {
+    background: #2B3044;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding: 0.35em;
+    padding-left: 0.5em;
+    font-size: 2.5em;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 3.5em;
+    padding-right: 3em;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5em;
+    width: 2.5em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em rgb(63, 63, 63);
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+    background: linear-gradient(
+      90deg,
+      #47C9FF,
+      #FF6464,
+      #FFBF59
+    );
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 12em;
+    transition: transform 0.3s;
+    color: #2B3044;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+    color: white;
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
